@@ -34,10 +34,15 @@ h6 {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   color: var(--pink);
+  text-transform: capitalize;
 }
 
 h1 {
   font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
 }
 
 a {
@@ -146,31 +151,94 @@ img {
 }
 
 /**
+ * MAIN CONTENT
+ * ------------------------------------------------------------------------- */
+.page-wrapper section {
+  width: 80%;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+.page-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.page-section h2 {
+  margin-right: 20px;
+  width: 115px;
+  text-align: right;
+}
+
+.page-section p {
+  border-left: 3px solid var(--pink);
+  padding-left: 20px;
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/**
  * MEDIA QUERIES
  * ------------------------------------------------------------------------- */
+@media screen and (max-width: 600px) {
+  .page-section {
+    flex-direction: column;
+  }
+
+  .page-section h2 {
+    width: auto;
+    text-align: center;
+    border-bottom: 3px solid var(--pink);
+    margin-bottom: 20px;
+  }
+
+  .page-section p {
+    border-left: none;
+    padding-left: 0;
+    min-height: auto;
+  }
+}
 @media screen and (max-width: 960px) {
   /* Global CSS */
   h1 {
     font-size: 1.8rem;
   }
 
+  /* Wrappers */
+  .header-wrapper,
+  .page-wrapper section {
+    width: 100%;
+  }
+
+  .header-wrapper {
+    padding: 0 20px;
+  }
+
+  .page-wrapper section {
+    padding: 50px 20px;
+  }
+
   /* Header */
   .header-wrapper {
-    width: 100%;
-    padding: 0 20px;
     flex-direction: column;
     height: auto;
   }
   .logo {
-    max-height: 48px;
     width: 100%;
+    height: 48px;
   }
 
   .logo img {
     width: 48px;
     height: 48px;
-    padding-bottom: 8px;
+    top: 4px;
+    position: absolute;
+    left: 20px;
   }
+
   .nav {
     width: 100%;
     max-height: 0;
@@ -201,5 +269,12 @@ img {
   /* Hero */
   .hero-banner {
     margin-top: 48px;
+  }
+}
+
+@media screen and (min-width: 1601px) {
+  .header-wrapper,
+  .page-wrapper section {
+    width: 70%;
   }
 }
