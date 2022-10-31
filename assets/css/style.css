@@ -36,6 +36,10 @@ h6 {
   color: var(--pink);
 }
 
+h1 {
+  font-size: 2.5rem;
+}
+
 a {
   text-decoration: none;
 }
@@ -113,9 +117,44 @@ img {
 }
 
 /**
+ * HERO
+ * ------------------------------------------------------------------------- */
+.hero-banner {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--light-gray);
+  margin-top: 80px;
+  flex-direction: column;
+  background-image: url('../images/hero-bg.svg');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.hero-banner img {
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  margin-bottom: 20px;
+}
+
+.hero-banner p {
+  font-size: 1.3rem;
+}
+
+/**
  * MEDIA QUERIES
  * ------------------------------------------------------------------------- */
 @media screen and (max-width: 960px) {
+  /* Global CSS */
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  /* Header */
   .header-wrapper {
     width: 100%;
     padding: 0 20px;
@@ -157,5 +196,10 @@ img {
 
   .toggle-checkbox:checked ~ nav {
     max-height: 100%;
+  }
+
+  /* Hero */
+  .hero-banner {
+    margin-top: 48px;
   }
 }
