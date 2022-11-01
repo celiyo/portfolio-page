@@ -11,7 +11,7 @@ N/A
 ## Usage
 
 ![Portfolio Page Screenshot](assets/images/screenshot.png)
-![Demo URL](https://celiyo.github.io/portfolio-page/)
+[Demo URL](https://celiyo.github.io/portfolio-page/)
 
 - When the page is loaded the page presents your name, a recent photo or avatar, and links to sections about you, your work, and how to contact you
 - When one of the links in the navigation is clicked then the UI scrolls to the corresponding section
